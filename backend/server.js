@@ -22,6 +22,6 @@ app.get("/", (req, res) => {
 	res.json({ result: "🍽️ Flavour Fiesta Backend Running" });
 });
 
-app.listen(port, host, () => {
+app.listen(port,() => {
   console.log(`🍽️ Flavour Fiesta Backend running on port ${port}`);
 });
