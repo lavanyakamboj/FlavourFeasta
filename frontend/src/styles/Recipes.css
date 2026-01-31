@@ -1,0 +1,255 @@
+.container {
+	padding: 2.5rem 1.5rem;
+	background-color: #f4f2f0;
+	font-family: "Georgia", serif;
+	max-width: 100%;
+	margin: 10px auto 0;
+}
+
+.recipes-cards-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+/* ================= CARD ================= */
+
+.recipes-card {
+	height: 15rem !important;
+	display: flex;
+	flex-direction: row;
+	background-color: #ffffff;
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+	width: 38rem;
+}
+
+.recipes-card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Image LEFT */
+.recipes-card-image {
+	width: 30%;
+	height: 100%;
+	flex-shrink: 0;
+}
+
+.recipes-card-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Content RIGHT */
+.recipes-card-content {
+	width: 70%;
+	padding: 1.6rem 1.8rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+}
+
+/* Title */
+.recipes-card-title {
+	font-size: 1.45rem;
+	font-weight: 700;
+	margin-bottom: 0.6rem;
+	color: #111;
+}
+
+/* Description */
+.recipes-card-text {
+	font-size: 1rem;
+	line-height: 1.6;
+	color: #555;
+	margin-bottom: 0.8rem;
+	overflow: hidden;
+	height:80px;
+}
+
+/* ======button=====*/
+.recipe-button {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	align-content: center;
+}
+.start-button,
+.continue-button {
+	outline: none;
+	border: none;
+	background-color: #694d21;
+	color: #ffffff;
+	padding: 0.3rem 0.7rem;
+	font-size: 0.9rem;
+	font-weight: 600;
+	border-radius: 4px;
+	text-decoration: none;
+	width: fit-content;
+}
+.start-button:hover,
+.continue-button:hover{
+border: 1px solid #694d21;
+	background-color: #ffffff;
+	color: #694d21;
+}
+.recipes-card-actions {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	margin-top: auto;
+}
+.recipes-card-actions .btn {
+	padding: 0.45rem 1.1rem !important;
+	font-size: 0.85rem;
+	line-height: 1.2;
+	margin: 0 !important;
+	white-space: nowrap;
+}
+
+.recipes-card-link {
+	margin-top: 20px;
+	display: inline-block;
+	background-color: #694d21;
+	color: #ffffff;
+	padding: 0.3rem 0.7rem;
+	font-size: 0.9rem;
+	font-weight: 600;
+	border-radius: 4px;
+	text-decoration: none;
+	width: fit-content;
+}
+
+.recipes-card-link:hover {
+	color: #604b21;
+	border: 1.5px solid #604b21;
+	background: transparent;
+	box-shadow: 0 6px 15px #604b20ba;
+}
+/* Remove button reset */
+.remove-btn {
+  outline: none;
+  border: none;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1296px) {
+	.recipes-cards-wrapper {
+		gap: 1.5rem;
+	}
+	.recipes-card {
+		width: 28rem;
+	}
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 968px) {
+	.start-button,
+	.continue-button {
+		padding: 0.2rem 0.5rem;
+		font-size: 0.7rem;
+	}
+	.recipes-card {
+		height: 23rem !important;
+		flex-direction: column;
+		width: 16rem;
+	}
+
+	.recipes-card-image {
+		width: 100%;
+		height: 50%;
+	}
+
+	.recipes-card-content {
+		width: 100%;
+		padding: 1rem;
+	}
+
+	.recipes-card-title {
+		font-size: 1.3rem;
+	}
+
+	.recipes-card-text {
+		font-size: 12px;
+	}
+
+	.recipes-card-actions {
+		margin-top: 0.6rem;
+		justify-content: space-between;
+	}
+}
+
+@media (max-width: 584px) {
+	.recipes-card {
+		width: 25rem;
+	}
+	.start-button,
+.continue-button {
+	padding: 0.3rem 0.7rem;
+	font-size: 0.9rem;
+}
+}
+
+/* ================= ERROR ================= */
+
+.error-wrapper {
+	min-height: 70vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 2rem;
+	color: #444;
+}
+
+.error-wrapper h2 {
+	font-size: 1.8rem;
+	margin-bottom: 0.5rem;
+	color: #b00020;
+}
+
+.error-wrapper p {
+	font-size: 1rem;
+	max-width: 420px;
+	line-height: 1.6;
+}
+
+/* =read more= */
+.read-more-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 8px 14px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #fff;
+	background: #604b20;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-decoration: none;
+}
+
+.read-more-btn:hover {
+	color: #604b20;
+	border: 1.5px solid #604b20;
+	background: transparent;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 15px #604b20ba;
+}
+
+.read-more-btn:active {
+	transform: scale(0.95);
+}

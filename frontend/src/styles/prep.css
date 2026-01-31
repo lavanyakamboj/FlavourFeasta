@@ -1,0 +1,150 @@
+.perp-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  font-family: Georgia, serif;
+}
+
+.perp-hero {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.perp-hero-text {
+  flex: 1;
+}
+
+.perp-hero-text h1 {
+  font-size: 3rem;
+}
+
+.hero-meta {
+  color: #555;
+}
+
+.perp-hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.perp-hero-image img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.saved {
+  margin-top: 1rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 1.2rem;
+  background: #694d21;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.saved.active {
+  background: #fff;
+  color: #694d21;
+  border: 2px solid #694d21;
+}
+
+.perp-details {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 3rem;
+}
+
+.ingredients {
+  background: #faf7f2;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.ingredient-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0ddd8;
+  padding: 0.4rem 0;
+}
+
+.preparation ol {
+  padding-left: 1.5rem;
+}
+
+.preparation li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.perp-video {
+  margin-top: 3rem;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.center-text {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.login-popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.login-popup {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 14px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .perp-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .perp-details {
+    grid-template-columns: 1fr;
+  }
+
+  .perp-hero-text h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .perp-page {
+    padding: 1.2rem;
+  }
+
+  .perp-hero-text h1 {
+    font-size: 1.8rem;
+  }
+}

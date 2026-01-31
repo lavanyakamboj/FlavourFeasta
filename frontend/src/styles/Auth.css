@@ -1,0 +1,183 @@
+/* ===============================
+   PREMIUM FOOD BRAND BACKGROUND
+================================ */
+.auth-page {
+  margin-top: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5efe8;
+  background-image:
+    radial-gradient(circle at 20% 20%, #ffe5d0 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, #ffd7a8 0%, transparent 45%);
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===============================
+   CARD – MODERN & LUXURY
+================================ */
+.auth-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 40px 36px;
+  border-radius: 22px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    0 30px 60px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle top accent line */
+.auth-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #c97c5d, #f2b880);
+}
+
+/* ===============================
+   ENTRY ANIMATION (CLASSY)
+================================ */
+.slide-in {
+  animation: cardReveal 0.8s ease forwards;
+}
+
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===============================
+   HEADINGS
+================================ */
+.auth-card h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #2d1b14;
+  margin-bottom: 6px;
+}
+
+.auth-subtitle {
+  font-size: 14px;
+  color: #7a6a63;
+  margin-bottom: 30px;
+}
+
+/* ===============================
+   INPUTS – CLEAN & PREMIUM
+================================ */
+.auth-form input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  border: 1px solid #e6ded7;
+  font-size: 14px;
+  background: #fafafa;
+  transition: all 0.25s ease;
+}
+
+.auth-form input::placeholder {
+  color: #b2a6a0;
+}
+
+.auth-form input:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: #c97c5d;
+  box-shadow: 0 4px 12px rgba(201, 124, 93, 0.18);
+}
+
+/* ===============================
+   PASSWORD FIELD
+================================ */
+.password-box {
+  position: relative;
+}
+
+.password-box span {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #9b8b84;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.password-box span:hover {
+  color: #c97c5d;
+  transform: translateY(-50%) scale(1.15);
+}
+
+/* ===============================
+   BUTTON – PREMIUM CTA
+================================ */
+.auth-form button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(135deg, #c97c5d, #e59a6f);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 30px rgba(201, 124, 93, 0.35);
+}
+
+.auth-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(201, 124, 93, 0.45);
+}
+
+.auth-form button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ===============================
+   ERROR / MESSAGE
+================================ */
+.auth-error {
+  background: #fff1f1;
+  color: #8a1f1f;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+/* ===============================
+   TOGGLE LINK
+================================ */
+.auth-toggle {
+  margin-top: 22px;
+  font-size: 14px;
+  color: #4a3a33;
+}
+
+.auth-toggle a {
+  color: #c97c5d;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-toggle a:hover {
+  text-decoration: underline;
+}
