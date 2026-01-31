@@ -7,8 +7,6 @@ const app = express();
 const connectDB = require("./api/config");
 
 const port = process.env.PORT || 4545;
-const host = process.env.HOST || "localhost";
-
 
 connectDB();
 
@@ -25,5 +23,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, host, () => {
-  console.log(`User server running at http://${host}:${port}`);
+  console.log(`🍽️ Flavour Fiesta Backend running on port ${port}`);
 });
