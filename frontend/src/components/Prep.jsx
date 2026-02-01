@@ -45,10 +45,7 @@ export default function Prep() {
     }
 
     if (!meal) return;
-      const BASE_URL =
-        window.location.hostname === "localhost"
-          ? "http://localhost:4545"
-          : "https://flavourfeasta.onrender.com";
+    const BASE_URL = "https://flavourfeasta.onrender.com";
     if (isSaved) {
       const res = await fetch(`${BASE_URL}/ff-user/remove-recipe`, {
         method: "POST",

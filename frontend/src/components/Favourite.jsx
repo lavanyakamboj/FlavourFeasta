@@ -23,10 +23,7 @@ export default function Favourite() {
 
   /* ================= REMOVE (BACKEND + LOCAL) ================= */
   const removeFromFavourites = async (recipeId) => {
-          const BASE_URL =
-        window.location.hostname === "localhost"
-          ? "http://localhost:4545"
-          : "https://flavourfeasta.onrender.com";
+  const BASE_URL = "https://flavourfeasta.onrender.com";
     try {
       const res = await fetch(
         `${BASE_URL}/ff-user/remove-recipe`,

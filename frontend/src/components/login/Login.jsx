@@ -18,10 +18,7 @@ export default function Login() {
     setMessage("");
 
     try {
-            const BASE_URL =
-        window.location.hostname === "localhost"
-          ? "http://localhost:4545"
-          : "https://flavourfeasta.onrender.com";
+        const BASE_URL = "https://flavourfeasta.onrender.com";
       const response = await axios.post(`${BASE_URL}/ff-user/login`, 
         { email, password }, { headers: { "Content-Type": "application/json" } }
       );
