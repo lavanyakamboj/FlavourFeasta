@@ -19,7 +19,7 @@ export default function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:4545/ff-user/login", // LOGIN endpoint
+        "https://flavourfeasta.onrender.com", // LOGIN endpoint
         { email, password }, { headers: { "Content-Type": "application/json" } }
       );
 
