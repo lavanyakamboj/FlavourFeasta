@@ -45,9 +45,12 @@ export default function Prep() {
     }
 
     if (!meal) return;
-
+      const BASE_URL =
+        window.location.hostname === "localhost"
+          ? "http://localhost:4545"
+          : "https://flavourfeasta.onrender.com";
     if (isSaved) {
-      const res = await fetch("http://localhost:4545/ff-user/remove-recipe", {
+      const res = await fetch(`${BASE_URL}/ff-user/remove-recipe`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -67,7 +70,7 @@ export default function Prep() {
         category: meal.strCategory
       };
 
-      const res = await fetch("http://localhost:4545/ff-user/save-recipe", {
+      const res = await fetch(`${BASE_URL}/ff-user/save-recipe`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

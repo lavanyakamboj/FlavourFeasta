@@ -35,7 +35,11 @@ export default function Signup() {
     }
 
     try {
-      const response = await fetch("https://flavourfeasta.onrender.com", {
+            const BASE_URL =
+        window.location.hostname === "localhost"
+          ? "http://localhost:4545"
+          : "https://flavourfeasta.onrender.com";
+      const response = await fetch(`${BASE_URL}/ff-user/saveInfo`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, email, password, contact }),
