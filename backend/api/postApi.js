@@ -16,8 +16,10 @@ const saveInfo = async (req, res) => {
     await newUser.save();
     res.status(200).json({ result: "User registered successfully" });
   } catch (error) {
-    res.status(409).json({ result: error.message });
-  }
+  console.error("SIGNUP ERROR 👉", error);
+  res.status(500).json({ error: error.message });
+}
+
 };
 
 /* ========== LOGIN ========== */
