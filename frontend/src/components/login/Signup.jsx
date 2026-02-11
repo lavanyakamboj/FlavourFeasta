@@ -36,10 +36,10 @@ export default function Signup() {
 
     try {
         const BASE_URL = "https://flavourfeasta.onrender.com";
-      const response = await fetch(`${BASE_URL}/ff-user/saveInfo`, {
+      const response = await fetch(`${BASE_URL}/ff-user/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, email, password, contact }),
+        body: JSON.stringify({ username, email, password, contact: Number(contact) }),
       });
 
       const data = await response.json();
